@@ -61,10 +61,10 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Finder                                                                      #
 ###############################################################################
 
-# Set Desktop as the default location for new Finder windows
+# Set home as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
 defaults write com.apple.finder NewWindowTarget -string "PfDe"
-defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 
 # Show icons for hard drives, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
@@ -96,7 +96,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # Screenshots                                                                 #
 ###############################################################################
 
-# Exclude date and time in screenshot filenames
+# Include date and time in screenshot filenames
 defaults write com.apple.screencapture "include-date" -bool true
 
 # Change the default screenshot file name
