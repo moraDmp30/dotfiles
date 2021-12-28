@@ -1,17 +1,20 @@
 #!/bin/bash
 
 # Hide "last login" line when starting a new terminal session
-touch $HOME/.hushlogin
+touch ~/.hushlogin
 
 # Install zsh
 echo 'Install oh-my-zsh'
 echo '-----------------'
-rm -rf $HOME/.oh-my-zsh
+rm -rf ~/.oh-my-zsh
 curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 # Add global gitignore
-#ln -s $HOME/.dotfiles/shell/.global-gitignore $HOME/.global-gitignore
-#git config --global core.excludesfile $HOME/.global-gitignore
+ln -s ~/.dotfiles/shell/.gitignore_global ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+
+# Add Laravel Homestead profile
+ln -s ~/.dotfiles/shell/.homestead_profile ~/.homestead_profile
 
 echo 'Install homebrew'
 echo '----------------'

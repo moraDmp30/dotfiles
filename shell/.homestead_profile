@@ -1,0 +1,7 @@
+function homestead() {
+   ( cd ~/Documents/Projects/Virtual\ Machines/Homestead && vagrant $* )
+}
+
+function homesteadCCM() {
+   ( cd ~/Documents/Projects/Virtual\ Machines/HomesteadCCM && vagrant $* )
+}
