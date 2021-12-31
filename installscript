@@ -16,8 +16,31 @@ git config --global core.excludesfile ~/.gitignore_global
 # Add Laravel Homestead profile
 ln -s ~/.dotfiles/shell/.homestead_profile ~/.homestead_profile
 
+# Add php-cs-fixer config files
+ln -s ~/.dotfiles/shell/.php-cs-fixer-config ~/.php-cs-fixer-config
+
 echo 'Install homebrew'
 echo '----------------'
 echo install homebrew
 sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+# Install php 8.1
+brew install php@8.1
+
+# Install composer
+EXPECTED_COMPOSER_CHECKSUM="$(curl https://composer.github.io/installer.sig)"
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+ACTUAL_COMPOSER_CHECKSUM="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
+if [ "$EXPECTED_COMPOSER_CHECKSUM" != "$ACTUAL_COMPOSER_CHECKSUM" ]
+then
+    >&2 echo 'ERROR: Invalid installer checksum'
+    rm composer-setup.php
+    exit 1
+fi
+php composer-setup.php
+rm composer-setup.php
+mv composer.phar /usr/local/bin/composer
+
+# Install php-cs-fixer
+composer global require friendsofphp/php-cs-fixer
