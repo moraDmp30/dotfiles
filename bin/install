@@ -84,6 +84,12 @@ step "Installing packages from Brewfile"
 brew bundle --file=~/.dotfiles/config/Brewfile || warn "Some packages failed (likely already installed)"
 success "Brewfile processed"
 
+# zsh-syntax-highlighting plugin
+step "Linking zsh-syntax-highlighting plugin"
+ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
+ln -sf /opt/homebrew/share/zsh-syntax-highlighting "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
+success "zsh-syntax-highlighting linked"
+
 # fnm - Node.js version manager
 step "Setting up fnm"
 eval "$(fnm env --use-on-cd)" || warn "fnm activation failed"
@@ -101,6 +107,12 @@ success "npm packages processed"
 step "Installing global Composer packages"
 composer global require laravel/pint || warn "pint already installed or failed"
 success "Composer packages processed"
+
+# iTerm2 preferences
+step "Configuring iTerm2 preferences"
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.dotfiles/config/iterm"
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+success "iTerm2 preferences configured"
 
 # Claude Code setup
 echo ""

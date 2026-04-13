@@ -4,6 +4,7 @@
 # Core tools
 brew "composer"
 brew "gh"
+brew "zsh-syntax-highlighting"
 
 # Modern CLI tools
 brew "fnm"
