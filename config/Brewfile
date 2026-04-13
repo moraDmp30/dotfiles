@@ -1,0 +1,9 @@
+# Dotfiles Brewfile
+# Install with: brew bundle --file=~/.dotfiles/Brewfile
+
+# Core tools
+brew "composer"
+brew "gh"
+
+# Modern CLI tools
+brew "fnm"

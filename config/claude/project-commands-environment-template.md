@@ -14,12 +14,19 @@
 | PHP        |         |
 | Laravel    |         | <!-- remove if not Laravel -->
 | WordPress  |         | <!-- remove if not WordPress -->
-| Node       |         | <!-- e.g. 20.11.0 — managed via nvm -->
+| Node       |         | <!-- e.g. 20.11.0 — managed via fnm -->
 | npm        |         | <!-- usually comes with Node, but specify if pinned -->
 
-> If a `.nvmrc` file is present in the project root, Node version is managed there.
-> Run `nvm use` with no arguments before any `npm` or `node` command.
+> If a `.nvmrc` or `.node-version` file is present in the project root, Node version is managed there.
+> Run `fnm use` with no arguments before any `npm` or `node` command.
 
+---
+
+## Repository
+ 
+**Platform:** <!-- GitHub Personal / GitHub Company / Bitbucket -->
+**Remote URL:**  <!-- update this -->
+ 
 ---
 
 ## How to run commands in this project
@@ -53,10 +60,12 @@ Do NOT run them on the host machine.
 Before running any `npm` or `node` command, activate the correct Node version:
 
 ```bash
-nvm use   # uses .nvmrc if present
+fnm use   # uses .nvmrc or .node-version if present
 # or
-nvm use 20.11.0   # specify version explicitly if no .nvmrc
+fnm use 20.11.0   # specify version explicitly if no .nvmrc and no .node-version
 ```
+
+**git and gh commands** must always be run on the host machine, not inside the VM.
 
 When in doubt, any command not explicitly specified above should be run inside the VM, not on the host.
 
@@ -75,7 +84,7 @@ Commands run directly on the host. Herd manages PHP and the local server.
 **npm commands** run directly on the host as well. Before any `npm` or `node` command, activate the correct Node version:
 
 ```bash
-nvm use   # uses .nvmrc if present
+fnm use   # uses .nvmrc or .node-version if present
 # or
-nvm use 20.11.0   # specify version explicitly if no .nvmrc
+fnm use 20.11.0   # specify version explicitly if no .nvmrc and no .node-version
 ```

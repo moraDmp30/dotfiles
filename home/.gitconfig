@@ -1,0 +1,18 @@
+[core]
+	excludesfile = /Users/mora/.global-gitignore
+	autocrlf = false
+	pager = delta
+
+[user]
+	name = Dani Mora
+	email = dmora.1989@gmail.com
+	signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDOvm1lcWenMUVsCG8lIiTGBUg+2HY4SLDFetLtkOArnq+QDw+VuuJdyZOIORVGnWSPWplYYcuPfMcXBMIi+NKOql8o8dVBD5URojVxk74eYYZURI++WolzuByToOYFFqXV3s6y9A+xWP7ESUsdXGITmTjhlI4I05XfttXb4pRZJlqW9ZWxtfrPPQTFNtb96pVUNTF36tqCFg6ePxKaQtBVfQjeuwTgTLYPvrTUkhT9/SFgiMU6cafW0XPV7ZKS4gEF3kM+0VJotCFki9KijYkzmTcWtEhJk9z+ywjQ3RfpxIGE3Q+ckrwh0E2S6VPbelZoOO/Fc+8aH6IY5NQtkhQB Mora@Daniels-MacBook-Pro.local
+
+[includeIf "gitdir:~/Documents/Projects/Square1/**"]
+    path = ~/.gitconfig-square1
+
+[init]
+	defaultBranch = master
+
+[fetch]
+	prune = true
