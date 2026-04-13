@@ -1,5 +1,4 @@
 # Mac OS X hidden files
-*~
 .DS_Store
 .DS_Store?
 ._*
@@ -8,15 +7,14 @@
 ehthumbs.db
 Thumbs.db
 
-# Fleet
-.fleet
+# Vim swap files
+.*.sw?
 
 # PhpStorm
 .idea
 
 # vs code
 .vscode
-*.code-workspace
 
 # Sublime Text
 *.sublime-project
@@ -27,6 +25,17 @@ npm-debug.log
 yarn-error.log
 .phpunit-watcher-cache.php
 .phpunit.result.cache
+
+# Playwright
+.playwright
+.playwright-mcp
+
+# Environment files
+.env
+
+# Claude
+.claude/settings.local.json
+.claude/project-commands-environment.md
 
 # Tinkerwell
 .phpactor.json

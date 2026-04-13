@@ -1,0 +1,10 @@
+# Dotfiles Brewfile
+# Install with: brew bundle --file=~/.dotfiles/Brewfile
+
+# Core tools
+brew "composer"
+brew "gh"
+brew "zsh-syntax-highlighting"
+
+# Modern CLI tools
+brew "fnm"
