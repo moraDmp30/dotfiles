@@ -20,7 +20,7 @@ Never mention Claude Code in PR descriptions, PR comments, or issue comments
 Do not include a "Test plan" section in PR descriptions
 
 ## Command Execution Environment
-Before running any shell command in a project, read the file `project-commands-environment.md`
+Before running any shell command in a project, read the file `.claude/project-commands-environment.md`
 in the project root (if it exists). It specifies where and how commands must be executed
 for that project (e.g. inside a VM, via a local dev tool, bare host, etc.).
 
