@@ -16,8 +16,11 @@ When working with Laravel/PHP projects, always use the php-guidelines-from-spati
 
 ## Using GitHub
 For questions about GitHub, use the gh tool
-Never mention Claude Code in PR descriptions, PR comments, or issue comments
+
+# General git usage with GitHub or BitBucket
 Do not include a "Test plan" section in PR descriptions
+NEVER commit or push changes on your behalf, wait for me the explicitly ask you to make it.
+Never mention Claude Code in PR descriptions, PR comments, or issue comments
 
 ## Command Execution Environment
 Before running any shell command in a project, read the file `.claude/project-commands-environment.md`
